@@ -12,12 +12,9 @@
 
     width: 100vw;
     height: 100vh;
-    background: #a8c0ff;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3f2b96, #a8c0ff);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #0093E9;
+    background-image: linear-gradient(109deg, #0093E9 0%, #80D0C7 100%);
+
 
     position: relative;
     display: grid;
@@ -234,5 +231,15 @@
         width: 80px;
         aspect-ratio: 1/1;
 
+    }
+
+    .choose-card h2{
+
+        color: rgb(254, 221, 5);
+    }
+
+    .choose-card span{
+
+        color: rgba(3, 254, 20, 0.929);
     }
 }
