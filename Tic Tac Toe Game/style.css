@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.wrapper {
+
+    width: 100vw;
+    height: 100vh;
+    background: #a8c0ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3f2b96, #a8c0ff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.choose-card{
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 300px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    scale: 0;
+
+}
+
+.choose-card.active{
+
+    scale: 1;
+}
+.choose-card h2{
+
+    color: rgba(255, 255, 255, 0.918);
+}
+
+.choose-card span{
+
+    color: rgba(255, 255, 255, 0.918);
+}
+
+.options{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 1rem;
+    font-size: 26px;
+    color: white;
+}
+
+.options #first{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    aspect-ratio: 1/1;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.options #first:hover{
+
+    background-color: rgba(74, 249, 5, 0.788);
+
+
+}
+
+.options #second{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    aspect-ratio: 1/1;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.options #second:hover{
+
+    background-color: rgba(225, 245, 11, 0.822);
+
+}
+
+.game-info {
+
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0s;
+    scale: 0;
+}
+
+.game-info.active{
+
+    scale: 1;
+}
+
+.tic-tac-toe{
+
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    aspect-ratio: 1/1;
+    scale: 0;
+    transition: all 0.3s ease-in-out 0s;
+
+}
+
+.tic-tac-toe.active{
+    
+    scale: 1;
+}
+
+.box{
+
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box1 , .box2 , .box4 , .box5{
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.box3 , .box6{
+
+    border-bottom: 2px solid white;
+}
+
+.box7 , .box8{
+
+    border-right: 2px solid white;
+}
+
+.btn{
+
+    color: white;
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+
+}
+
+.btn.active{
+
+    display: flex;
+}
+
+.win{
+
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+@media (max-width:520px) {
+    
+    .choose-card{
+
+        max-width: 85%;
+        height: 320px;
+        padding: 2rem 1.5rem;
+        
+    }
+
+    .options{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .options #first{
+
+        width: 80px;
+        aspect-ratio: 1/1;
+
+    }
+
+    .options #second{
+
+        width: 80px;
+        aspect-ratio: 1/1;
+
+    }
+}
