@@ -16,4 +16,4 @@ Welcome to the Repository. This repo is about the Tic Tac Toe game built by me.
 </div>
 
 <h2>Live Link</h2>
-<a href="" target="_blank">https://tic-tac-toe-akshat.netlify.app/</a>
+<a href="https://tic-tac-toe-akshat.netlify.app/" target="_blank">Click Here</a>
